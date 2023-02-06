@@ -31,16 +31,22 @@ class SeriesController extends Controller
     }
 
     public function store(Request $request){
-        $nomeSerie = $request->input('nome');
+        // $nomeSerie = $request->input('nome');
 
         //o db não é uma boa utilização, pois acessa diretamente o banco de dados
         // DB::insert('INSERT INTO series (nome) VALUES (?)', [$nomeSerie]);
 
-        $serie = new Serie();
+        // $serie = new Serie();
 
-        $serie->nome = $nomeSerie;
-        $serie->save();
+        // $serie->nome = $nomeSerie;
+        // $serie->save();
 
-        return redirect('/series');
+        // Serie::create($request->only(['nome', 'teste']));
+        // Serie::create($request->except(['_token']));
+        Serie::create($request->all());
+
+        //só funciona no laravel 9
+        return to_route('series.index');
+        // return redirect()->route('series.index');
     }
 }
