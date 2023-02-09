@@ -42,4 +42,10 @@ Route::get('/', function () {
 // });
 
 // usar o resource ele meio que define rotas que ainda n temos, mas basta nomear direitinho os metodos e arquivos que ele encontra
-Route::resource('/series', SeriesController::class);
+// aqui abaixo posso utilizar os metodos only() e excepted() pra definir as rotas que já tenho
+// Route::resource('/series', SeriesController::class)->only('index', 'create', 'store', 'destroy', 'edit');
+Route::resource('/series', SeriesController::class)->except('show');
+// Route::resource('/series', SeriesController::class);
+
+// Route::delete('/series/destroy/{id}', [SeriesController::class, 'destroy'])->name('series.destroy');
+
