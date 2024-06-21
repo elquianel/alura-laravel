@@ -1,0 +1,30 @@
+=========== COMANDOS =========== 
+
+composer update - pra atualizar os pacotes que foram ignorados no gitignore
+
+copy .env.example .env - para copiar o arquivo .env que sobe só o example no github
+
+php artisan serve - pra rodar o servidor laravel
+
+php artisan key:generate - comando para atualizar a chave de verificação da session
+
+php artisan make:controller NomeController - comando para criar um controller
+
+php artisan make:controller NomeController --resource - comando para criar um controller com todos os metodos principais já criados
+
+php artisan make:migration nome_migration
+
+php artisan make:component nome_componente - vai criar um componente na view e uma classe desse componente, lá dentro do app
+
+php artisan migrate 
+
+php artisan migrate:fresh
+
+php artisan serve --host=0.0.0.0 --port=5000 -> especificando uma porta para saída do projeto
+
+
+
+
+
+
+Route::{verbo http}('{sua rota}', {Código a ser executado}); -> criando rota simples
