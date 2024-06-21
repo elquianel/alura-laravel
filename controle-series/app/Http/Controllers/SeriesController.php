@@ -11,7 +11,8 @@ class SeriesController extends Controller
     public function index(){
 
         //o db não é uma boa utilização, pois acessa diretamente o banco de dados
-        // $series = DB::select('SELECT nome from series');
+        // $teste = DB::select('SELECT * from usuario where id_usuario = 404242');
+        // dd($teste);
 
         //maneira correta de se faazer, utilizando o ORM do laravel, o elouquent
         $series = Serie::all();
