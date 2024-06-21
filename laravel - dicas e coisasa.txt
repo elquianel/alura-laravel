@@ -2,3 +2,5 @@ JS::from($arrayParaSerTransformadoEmJson);
 
 
 npm run mix
+
+$certificates = $certificates->collapse(); - a função collapse meio que "colapsa" arrays em um só
